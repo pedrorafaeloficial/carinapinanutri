@@ -548,10 +548,44 @@
 
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const btn = e.target.querySelector('button');
+            const form = e.target;
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
             btn.innerText = 'Processando...';
-            window.open(`https://wa.me/5511962043550?text=${encodeURIComponent("Olá Carina, quero agendar uma consultoria gratuita")}`, '_blank');
-            setTimeout(() => { btn.innerText = 'Agendar Consultoria'; e.target.reset(); }, 2000);
+
+            // Coleta os dados do formulário
+            const formData = new FormData(form);
+            const webhookData = {
+                nome_responsavel: formData.get('parent_name'),
+                nome_crianca: formData.get('child_name'),
+                idade_crianca: formData.get('child_age'),
+                whatsapp: formData.get('whatsapp'),
+                mensagem: formData.get('message')
+            };
+
+            // Envia para o Webhook via POST
+            fetch('https://automacao.agenciafoxon.com.br/webhook/consultoriagratuita', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(webhookData)
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Falha na requisição ao webhook');
+                console.log('Dados enviados com sucesso.');
+            })
+            .catch(error => {
+                console.error('Erro ao enviar webhook:', error);
+            })
+            .finally(() => {
+                // Redireciona para o WhatsApp após a tentativa de envio e reseta o botão/form
+                const msgPersonalizada = `Olá Carina, quero agendar uma consultoria gratuita. Meu nome é ${webhookData.nome_responsavel} e falo sobre o/a ${webhookData.nome_crianca}.`;
+                window.open(`https://wa.me/5511962043550?text=${encodeURIComponent(msgPersonalizada)}`, '_blank');
+                
+                btn.innerText = originalText;
+                form.reset();
+            });
         });
     </script>
 </body>
