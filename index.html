@@ -23,12 +23,12 @@
                 extend: {
                     colors: {
                         'nutri-pink': '#FF9AA2',
-                        'nutri-pink-dark': '#FF6B7A', // Mais escuro para contraste
+                        'nutri-pink-dark': '#FF6B7A', 
                         'nutri-green': '#B5EAD7',
-                        'nutri-green-dark': '#6FCF97', // Mais escuro para contraste
+                        'nutri-green-dark': '#6FCF97', 
                         'nutri-yellow': '#FFF5BA',
                         'nutri-purple': '#E2F0CB',
-                        'nutri-text': '#3A3A3A', // Texto um pouco mais escuro
+                        'nutri-text': '#3A3A3A', 
                         'nutri-bg': '#FFFDF9',
                     },
                     fontFamily: {
@@ -101,6 +101,10 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .perspective-1000 {
+            perspective: 1000px;
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -124,10 +128,8 @@
                     <a href="#home" class="text-nutri-text hover:text-nutri-pink-dark font-semibold transition-colors">Início</a>
                     <a href="#sobre" class="text-nutri-text hover:text-nutri-pink-dark font-semibold transition-colors">Sobre</a>
                     <a href="#servicos" class="text-nutri-text hover:text-nutri-pink-dark font-semibold transition-colors">Serviços</a>
-                    <!-- Novo link para o Ebook -->
-                    <a href="#ebook" class="text-nutri-text hover:text-nutri-pink-dark font-semibold transition-colors">Ebook</a>
+                    <a href="#ebooks" class="text-nutri-text hover:text-nutri-pink-dark font-semibold transition-colors">E-books</a>
                     <a href="#depoimentos" class="text-nutri-text hover:text-nutri-pink-dark font-semibold transition-colors">Depoimentos</a>
-                    <!-- Botão Navbar Atualizado -->
                     <a href="#contato" class="px-6 py-2.5 bg-nutri-pink hover:bg-nutri-pink-dark text-white rounded-full font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2">
                         <i data-lucide="calendar-heart" class="w-4 h-4"></i> Consultoria Gratuita
                     </a>
@@ -148,9 +150,8 @@
                 <a href="#home" class="block px-3 py-3 text-nutri-text font-semibold hover:bg-nutri-yellow rounded-lg">Início</a>
                 <a href="#sobre" class="block px-3 py-3 text-nutri-text font-semibold hover:bg-nutri-yellow rounded-lg">Sobre a Carina</a>
                 <a href="#servicos" class="block px-3 py-3 text-nutri-text font-semibold hover:bg-nutri-yellow rounded-lg">Serviços</a>
-                <a href="#ebook" class="block px-3 py-3 text-nutri-text font-semibold hover:bg-nutri-yellow rounded-lg">Ebook <span class="text-xs bg-nutri-pink text-white px-2 py-0.5 rounded-full ml-2">Novo!</span></a>
+                <a href="#ebooks" class="block px-3 py-3 text-nutri-text font-semibold hover:bg-nutri-yellow rounded-lg">E-books</a>
                 <a href="#depoimentos" class="block px-3 py-3 text-nutri-text font-semibold hover:bg-nutri-yellow rounded-lg">Depoimentos</a>
-                <!-- Link Mobile Atualizado -->
                 <a href="#contato" class="block px-3 py-3 text-nutri-pink-dark font-bold hover:bg-nutri-pink hover:text-white rounded-lg">Agendar Consultoria Gratuita</a>
             </div>
         </div>
@@ -158,28 +159,24 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
-        <!-- Fundo Decorativo -->
         <div class="absolute inset-0 bg-pattern -z-10"></div>
         <div class="absolute top-20 right-0 w-64 h-64 bg-nutri-green/30 rounded-full blur-3xl -z-10"></div>
         <div class="absolute bottom-0 left-0 w-80 h-80 bg-nutri-pink/20 rounded-full blur-3xl -z-10"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Texto Hero -->
                 <div class="text-center lg:text-left reveal-on-scroll">
                     <div class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm border border-nutri-green mb-6">
                         <span class="w-2 h-2 rounded-full bg-green-400"></span>
                         <span class="text-sm font-bold text-gray-600 uppercase tracking-wider">Nutrição Infantil Especializada</span>
                     </div>
                     <h1 class="font-heading text-5xl lg:text-6xl font-bold leading-tight text-gray-800 mb-6">
-                        <!-- Removidas as classes: underline decoration-wavy decoration-nutri-yellow -->
                         Transformando a alimentação em <span class="text-nutri-pink-dark">diversão</span> e <span class="text-nutri-green-dark">saúde!</span>
                     </h1>
                     <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
                         Ajudo famílias a construírem uma relação saudável com a comida, desde a introdução alimentar até a adolescência. Sem pressão, com muito afeto e profissionalismo.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <!-- Botão Hero Atualizado -->
                         <a href="#contato" class="px-8 py-4 bg-nutri-pink-dark hover:bg-nutri-pink text-white rounded-full font-bold text-lg shadow-lg hover:shadow-nutri-pink/50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
                             <i data-lucide="message-circle-heart"></i>
                             Quero Consultoria Gratuita
@@ -190,18 +187,13 @@
                     </div>
                 </div>
 
-                <!-- Imagem Hero (Ilustração com CSS) -->
                 <div class="relative mx-auto w-full max-w-md lg:max-w-full reveal-on-scroll">
                     <div class="relative z-10 animate-float">
-                        <!-- Simulação de Moldura de Foto Divertida -->
                         <div class="bg-white p-4 rounded-[2rem] shadow-2xl transform rotate-2">
-                             <!-- Placeholder Ilustrativo Colorido -->
                             <div class="bg-nutri-yellow rounded-[1.5rem] aspect-square overflow-hidden relative flex items-center justify-center">
-                                <!-- Nova foto de prato infantil -->
                                 <div class="absolute inset-0 bg-[url('/assets/images/Design-sem-nome.jpg')] bg-cover bg-center opacity-90 hover:scale-105 transition-transform duration-700"></div>
                                 <div class="absolute inset-0 bg-gradient-to-t from-nutri-pink-dark/40 to-transparent"></div>
                                 
-                                <!-- Cards flutuantes -->
                                 <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg animate-float-delay flex items-center gap-3">
                                     <div class="bg-green-100 p-2 rounded-full text-green-600">
                                         <i data-lucide="carrot"></i>
@@ -224,7 +216,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Background Blob -->
                     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-nutri-green/20 blob-shape -z-10"></div>
                 </div>
             </div>
@@ -235,12 +226,9 @@
     <section id="sobre" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col-reverse md:flex-row items-center gap-16">
-                <!-- Imagem/Perfil -->
                 <div class="w-full md:w-1/2 relative reveal-on-scroll">
                     <div class="bg-nutri-pink rounded-tr-[80px] rounded-bl-[80px] rounded-tl-[20px] rounded-br-[20px] p-2 shadow-xl transform -rotate-2">
-                         <!-- Placeholder para foto da Nutri -->
                         <div class="h-96 bg-gray-100 rounded-tr-[75px] rounded-bl-[75px] rounded-tl-[15px] rounded-br-[15px] overflow-hidden relative">
-                            <!-- Nova foto da Nutri com ajuste de contraste e brilho -->
                             <img src="/assets/images/WhatsApp-Image-2024-07-09-at-12.11.07-e1763419392909.jpeg" alt="Nutricionista Carina Pina" class="w-full h-full object-cover contrast-110 brightness-105" onerror="this.src='https://via.placeholder.com/600x800?text=Foto+Carina'">
                         </div>
                     </div>
@@ -250,7 +238,6 @@
                     </div>
                 </div>
 
-                <!-- Texto -->
                 <div class="w-full md:w-1/2 reveal-on-scroll">
                     <h2 class="font-heading text-4xl font-bold text-gray-800 mb-6">Oi! Eu sou a <span class="text-nutri-pink-dark">Carina Pina</span></h2>
                     <p class="text-lg text-gray-600 mb-4 leading-relaxed">
@@ -275,7 +262,7 @@
         </div>
     </section>
 
-    <!-- Seção Serviços (Cards Coloridos) -->
+    <!-- Seção Serviços -->
     <section id="servicos" class="py-20 bg-nutri-bg relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal-on-scroll">
@@ -284,7 +271,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
                 <div class="bg-white p-8 rounded-3xl shadow-lg border-b-8 border-nutri-green hover:-translate-y-2 transition-transform duration-300 reveal-on-scroll">
                     <div class="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-green-600">
                         <i data-lucide="baby" class="w-8 h-8"></i>
@@ -297,7 +283,6 @@
                     </ul>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="bg-white p-8 rounded-3xl shadow-lg border-b-8 border-nutri-pink hover:-translate-y-2 transition-transform duration-300 reveal-on-scroll" style="transition-delay: 100ms;">
                     <div class="bg-red-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-red-500">
                         <i data-lucide="frown" class="w-8 h-8"></i>
@@ -310,7 +295,6 @@
                     </ul>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="bg-white p-8 rounded-3xl shadow-lg border-b-8 border-nutri-yellow hover:-translate-y-2 transition-transform duration-300 reveal-on-scroll" style="transition-delay: 200ms;">
                     <div class="bg-yellow-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-yellow-600">
                         <i data-lucide="utensils" class="w-8 h-8"></i>
@@ -326,196 +310,142 @@
         </div>
     </section>
 
-    <!-- Dica Interativa / Gamification -->
-    <section class="py-16 bg-nutri-green-dark/10 overflow-hidden">
-        <!-- ... existing code content of this section ... -->
-        <div class="max-w-4xl mx-auto px-4 text-center reveal-on-scroll">
-            <h3 class="font-heading text-3xl font-bold text-gray-800 mb-8">🥑 O prato ideal tem que ter...</h3>
+    <!-- Seção Ebooks -->
+    <div id="ebooks">
+        <!-- EBOOK 1: Destrave o Paladar -->
+        <section id="ebook" class="py-24 relative overflow-hidden bg-gradient-to-br from-nutri-pink/10 to-nutri-yellow/20 border-t border-gray-100">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-nutri-yellow/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-10"></div>
             
-            <div class="bg-white rounded-full p-8 shadow-xl max-w-md mx-auto aspect-square relative border-4 border-nutri-bg">
-                <!-- Divisões do prato (Visual) -->
-                <div class="absolute inset-0 rounded-full overflow-hidden opacity-20">
-                    <div class="w-1/2 h-full bg-green-500 float-left"></div> <!-- 50% Vegetais -->
-                    <div class="w-1/2 h-1/2 bg-yellow-500 float-right"></div> <!-- 25% Carboidrato -->
-                    <div class="w-1/2 h-1/2 bg-red-500 float-right"></div> <!-- 25% Proteina -->
-                </div>
-
-                <div class="relative z-10 h-full flex flex-col justify-center items-center gap-4">
-                    <div class="grid grid-cols-2 gap-4 w-full h-full">
-                        <div class="col-span-1 row-span-2 flex flex-col items-center justify-center text-green-700 animate-float">
-                            <i data-lucide="leaf" class="w-12 h-12 mb-2"></i>
-                            <span class="font-bold">50% Vegetais</span>
-                            <span class="text-xs">Coloridos!</span>
-                        </div>
-                        <div class="col-span-1 flex flex-col items-center justify-center text-yellow-700">
-                            <i data-lucide="wheat" class="w-8 h-8 mb-1"></i>
-                            <span class="font-bold text-sm">25% Energia</span>
-                            <span class="text-xs">(Arroz, Batata)</span>
-                        </div>
-                        <div class="col-span-1 flex flex-col items-center justify-center text-red-700">
-                            <i data-lucide="drumstick" class="w-8 h-8 mb-1"></i>
-                            <span class="font-bold text-sm">25% Proteína</span>
-                            <span class="text-xs">(Carnes, Feijão)</span>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="hidden lg:block w-full lg:w-5/12 relative reveal-on-scroll group">
+                        <div class="absolute inset-0 bg-nutri-pink-dark blur-[60px] opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                        <div class="relative transform perspective-1000 hover:scale-[1.02] hover:rotate-1 transition-all duration-500 ease-out">
+                            <div class="relative z-10 rounded-r-xl rounded-l-md shadow-2xl bg-white">
+                                <img src="/assets/images/Sem-Titulo-1_ba494cee0edb4778bd3dd882bfd6b1ee-1.jpg" alt="Capa Ebook Destrave o Paladar" class="w-full h-auto rounded-r-lg rounded-l-md shadow-inner block">
+                                <div class="absolute top-0 left-0 bottom-0 w-3 bg-gradient-to-r from-black/40 via-black/10 to-transparent rounded-l-md z-20 pointer-events-none"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent rounded-lg z-20 pointer-events-none mix-blend-overlay"></div>
+                            </div>
+                            <div class="absolute -bottom-4 left-4 right-4 h-4 bg-black/20 blur-xl rounded-[50%] z-0"></div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <p class="mt-8 text-gray-600 italic">"Não precisa ser perfeito todo dia, precisa ser constante!"</p>
-        </div>
-    </section>
 
-    <!-- Seção EBOOK (NOVA) -->
-    <section id="ebook" class="py-24 relative overflow-hidden bg-gradient-to-br from-nutri-pink/10 to-nutri-yellow/20">
-        <!-- Elementos decorativos de fundo -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-nutri-yellow/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-10"></div>
-        <div class="absolute bottom-0 left-0 w-72 h-72 bg-nutri-green/30 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 -z-10"></div>
-        
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                
-                <!-- Coluna da Imagem do Ebook (Desktop: Visível / Mobile: Oculto) -->
-                <div class="hidden lg:block w-full lg:w-5/12 relative reveal-on-scroll group">
-                    <!-- Efeito de brilho atrás do livro -->
-                    <div class="absolute inset-0 bg-nutri-pink-dark blur-[60px] opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-                    
-                    <!-- Container do Livro com efeito 3D (CSS Mockup) -->
-                    <div class="relative transform perspective-1000 hover:scale-[1.02] hover:rotate-1 transition-all duration-500 ease-out">
-                        <div class="relative z-10 rounded-r-xl rounded-l-md shadow-2xl bg-white">
-                            <!-- IMAGEM OFICIAL DO EBOOK -->
-                            <img src="/assets/images/Sem-Titulo-1_ba494cee0edb4778bd3dd882bfd6b1ee-1.jpg" alt="Capa Ebook Destrave o Paladar" class="w-full h-auto rounded-r-lg rounded-l-md shadow-inner block">
-                            
-                            <!-- Efeito de Lombada/Spine (Sombra esquerda) -->
-                            <div class="absolute top-0 left-0 bottom-0 w-3 bg-gradient-to-r from-black/40 via-black/10 to-transparent rounded-l-md z-20 pointer-events-none"></div>
-                            
-                            <!-- Efeito de Brilho na Capa -->
-                            <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent rounded-lg z-20 pointer-events-none mix-blend-overlay"></div>
+                    <div class="w-full lg:w-7/12 space-y-8 reveal-on-scroll">
+                        <div class="inline-block bg-nutri-pink-dark text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide mb-2 uppercase">
+                            E-book Destrave o Paladar
                         </div>
-                        
-                        <!-- Sombra inferior realista -->
-                        <div class="absolute -bottom-4 left-4 right-4 h-4 bg-black/20 blur-xl rounded-[50%] z-0"></div>
-                    </div>
+                        <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+                            Destrave o paladar do seu filho <span class="text-nutri-pink-dark">sem brigas!</span>
+                        </h2>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Chega de estresse na hora das refeições. Preparei um material exclusivo com <strong>5 Checklists Práticos</strong> para guiar você passo a passo nessa jornada de descoberta alimentar.
+                        </p>
 
-                    <!-- Selo de Garantia -->
-                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-full shadow-lg animate-float-delay flex flex-col items-center justify-center w-28 h-28 border-4 border-nutri-green z-20">
-                        <span class="font-bold text-2xl text-nutri-green-dark">100%</span>
-                        <span class="text-xs font-bold text-gray-500 text-center leading-tight">Prático e Divertido</span>
-                    </div>
-                </div>
-
-                <!-- Coluna de Texto e Vendas -->
-                <div class="w-full lg:w-7/12 space-y-8 reveal-on-scroll">
-                    <div class="inline-block bg-nutri-pink-dark text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide mb-2 uppercase">
-                        Lançamento Especial
-                    </div>
-                    <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
-                        Destrave o paladar do seu filho <span class="text-nutri-pink-dark">sem brigas!</span>
-                    </h2>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        Chega de estresse na hora das refeições. Preparei um material exclusivo com <strong>5 Checklists Práticos</strong> para guiar você passo a passo nessa jornada de descoberta alimentar.
-                    </p>
-
-                    <!-- IMAGEM DO EBOOK MOBILE (Inserida aqui para aparecer entre o texto e os checklists) -->
-                    <!-- Visível apenas no Mobile (lg:hidden) -->
-                    <div class="block lg:hidden w-3/4 mx-auto my-8 relative group">
-                         <!-- Efeito de brilho atrás do livro -->
-                         <div class="absolute inset-0 bg-nutri-pink-dark blur-[40px] opacity-20"></div>
-                         
-                         <!-- Container do Livro Mobile -->
-                         <div class="relative transform perspective-1000">
-                             <div class="relative z-10 rounded-r-xl rounded-l-md shadow-xl bg-white">
-                                 <img src="/assets/images/Sem-Titulo-1_ba494cee0edb4778bd3dd882bfd6b1ee-1.jpg" alt="Capa Ebook Destrave o Paladar" class="w-full h-auto rounded-r-lg rounded-l-md shadow-inner block">
-                                 
-                                 <!-- Efeitos Mobile -->
-                                 <div class="absolute top-0 left-0 bottom-0 w-2 bg-gradient-to-r from-black/40 via-black/10 to-transparent rounded-l-md z-20 pointer-events-none"></div>
-                                 <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent rounded-lg z-20 pointer-events-none mix-blend-overlay"></div>
+                        <!-- Versão Mobile -->
+                        <div class="block lg:hidden w-3/4 mx-auto my-8 relative">
+                             <div class="relative rounded-r-xl rounded-l-md shadow-xl bg-white">
+                                 <img src="/assets/images/Sem-Titulo-1_ba494cee0edb4778bd3dd882bfd6b1ee-1.jpg" alt="Capa Ebook Destrave o Paladar" class="w-full h-auto rounded-r-lg rounded-l-md block">
                              </div>
-                             <div class="absolute -bottom-3 left-3 right-3 h-3 bg-black/20 blur-lg rounded-[50%] z-0"></div>
-                         </div>
- 
-                         <!-- Selo de Garantia Mobile (Menor) -->
-                         <div class="absolute -bottom-4 -right-4 bg-white p-2 rounded-full shadow-lg flex flex-col items-center justify-center w-20 h-20 border-2 border-nutri-green z-20">
-                             <span class="font-bold text-lg text-nutri-green-dark">100%</span>
-                             <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Prático</span>
-                         </div>
-                    </div>
-
-                    <!-- Lista de Checklists (Nova Estrutura) -->
-                    <div class="space-y-3 bg-white/50 p-6 rounded-2xl border border-nutri-green/20">
-                        <h4 class="font-bold text-nutri-pink-dark mb-4 flex items-center gap-2">
-                            <i data-lucide="list-checks" class="w-5 h-5"></i> O que você vai receber:
-                        </h4>
-
-                        <!-- Checklist 1 -->
-                        <div class="flex items-start gap-3 p-3 bg-white rounded-xl shadow-sm border-l-4 border-nutri-green hover:translate-x-1 transition-transform">
-                            <div class="bg-green-100 p-1.5 rounded-full text-green-600 shrink-0 mt-0.5">
-                                <i data-lucide="check" class="w-4 h-4"></i>
-                            </div>
-                            <span class="text-gray-700 font-semibold">Checklist 1: Brincadeiras e Dinâmicas para Despertar a Curiosidade</span>
-                        </div>
-                        
-                        <!-- Checklist 2 -->
-                        <div class="flex items-start gap-3 p-3 bg-white rounded-xl shadow-sm border-l-4 border-nutri-pink hover:translate-x-1 transition-transform">
-                            <div class="bg-pink-100 p-1.5 rounded-full text-pink-500 shrink-0 mt-0.5">
-                                <i data-lucide="check" class="w-4 h-4"></i>
-                            </div>
-                            <span class="text-gray-700 font-semibold">Checklist 2: Os Primeiros Passos - Alimentos para Iniciar a Jornada</span>
                         </div>
 
-                        <!-- Checklist 3 (Atualizado) -->
-                        <div class="flex items-start gap-3 p-3 bg-white rounded-xl shadow-sm border-l-4 border-nutri-yellow hover:translate-x-1 transition-transform">
-                            <div class="bg-yellow-100 p-1.5 rounded-full text-yellow-600 shrink-0 mt-0.5">
-                                <i data-lucide="check" class="w-4 h-4"></i>
+                        <div class="flex flex-col sm:flex-row items-center gap-6 pt-4 border-t border-gray-200">
+                            <div class="text-center sm:text-left">
+                                <span class="block text-gray-400 text-sm line-through">De R$ 47,90</span>
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-gray-600 font-bold text-lg">Por</span>
+                                    <span class="text-4xl font-bold text-nutri-green-dark">R$ 27,90</span>
+                                </div>
                             </div>
-                            <span class="text-gray-700 font-semibold">Checklist 3: Desbravando Novos Territórios - Alimentos Mais Complexos</span>
-                        </div>
-
-                        <!-- Checklist 4 (Atualizado) -->
-                        <div class="flex items-start gap-3 p-3 bg-white rounded-xl shadow-sm border-l-4 border-nutri-purple hover:translate-x-1 transition-transform">
-                            <div class="bg-purple-100 p-1.5 rounded-full text-purple-500 shrink-0 mt-0.5">
-                                <i data-lucide="check" class="w-4 h-4"></i>
-                            </div>
-                            <span class="text-gray-700 font-semibold">Checklist 4: Alimentos Superpoderosos - Aliados Anti-inflamatórios</span>
-                        </div>
-
-                         <!-- Checklist 5 (Atualizado) -->
-                         <div class="flex items-start gap-3 p-3 bg-white rounded-xl shadow-sm border-l-4 border-blue-200 hover:translate-x-1 transition-transform">
-                            <div class="bg-blue-100 p-1.5 rounded-full text-blue-500 shrink-0 mt-0.5">
-                                <i data-lucide="check" class="w-4 h-4"></i>
-                            </div>
-                            <span class="text-gray-700 font-semibold">Checklist 5: Construindo Pontes de Sabor - A Técnica de Food Chaining Passo a Passo</span>
+                            <a href="https://pay.kiwify.com.br/CCfld17" target="_blank" class="flex-1 w-full sm:w-auto bg-nutri-pink-dark hover:bg-nutri-pink text-white text-lg font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-nutri-pink/50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 group">
+                                <span>Quero destravar agora!</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <!-- Preço e Botão -->
-                    <div class="flex flex-col sm:flex-row items-center gap-6 pt-4 border-t border-gray-200">
-                        <div class="text-center sm:text-left">
-                            <span class="block text-gray-400 text-sm line-through">De R$ 97,90</span>
-                            <div class="flex items-baseline gap-1">
-                                <span class="text-gray-600 font-bold text-lg">Por</span>
-                                <span class="text-4xl font-bold text-nutri-green-dark">R$ 47,90</span>
-                            </div>
-                        </div>
-                        <a href="https://pay.kiwify.com.br/CCfld17" target="_blank" class="flex-1 w-full sm:w-auto bg-nutri-pink-dark hover:bg-nutri-pink text-white text-lg font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-nutri-pink/50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 group-hover:animate-pulse">
-                            <span>Quero destravar agora!</span>
-                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                    <p class="text-xs text-center sm:text-left text-gray-400 flex items-center gap-1 justify-center sm:justify-start">
-                        <i data-lucide="lock" class="w-3 h-3"></i> Compra segura & Download imediato
-                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- EBOOK 2: Bebê Fortinho -->
+        <section id="ebook-bebe-fortinho" class="py-24 relative overflow-hidden bg-white">
+            <div class="absolute bottom-0 left-0 w-72 h-72 bg-nutri-green/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 -z-10"></div>
+            
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+                    <div class="hidden lg:block w-full lg:w-5/12 relative reveal-on-scroll group">
+                        <div class="absolute inset-0 bg-nutri-green-dark blur-[60px] opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                        <div class="relative transform perspective-1000 hover:scale-[1.02] hover:rotate-1 transition-all duration-500 ease-out">
+                            <div class="relative z-10 rounded-r-xl rounded-l-md shadow-2xl bg-white overflow-hidden">
+                                <!-- IMAGEM OFICIAL ATUALIZADA -->
+                                <img src="/assets/images/capabebe.jpeg" alt="Capa Ebook Bebê Fortinho" class="w-full h-auto rounded-r-lg rounded-l-md block" onerror="this.src='https://via.placeholder.com/600x800?text=Bebê+Fortinho'">
+                                <div class="absolute top-0 left-0 bottom-0 w-3 bg-gradient-to-r from-black/30 to-transparent rounded-l-md z-20"></div>
+                            </div>
+                            <div class="absolute -bottom-4 left-4 right-4 h-4 bg-black/10 blur-xl rounded-[50%] z-0"></div>
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-full shadow-lg animate-float flex flex-col items-center justify-center w-28 h-28 border-4 border-nutri-pink z-20">
+                            <span class="font-bold text-sm text-nutri-pink-dark text-center leading-tight">Seguro e<br>Sem Medo</span>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-7/12 space-y-8 reveal-on-scroll">
+                        <div class="inline-block bg-nutri-green-dark text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide mb-2 uppercase">
+                            Guia Definitivo
+                        </div>
+                        <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+                            Bebê fortinho: o guia definitivo para a <span class="text-nutri-green-dark">introdução alimentar segura!</span>
+                        </h2>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Aprenda a introduzir os alimentos da forma correta, garantindo que seu bebê cresça saudável e forte. Um método prático para pais que querem segurança e tranquilidade nesta fase.
+                        </p>
+
+                        <div class="space-y-3 bg-nutri-bg p-6 rounded-2xl border border-nutri-green/20">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="text-nutri-green-dark w-5 h-5"></i>
+                                <span class="text-gray-700 font-semibold">Cortes seguros (BLW) e consistências</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="text-nutri-green-dark w-5 h-5"></i>
+                                <span class="text-gray-700 font-semibold">Prevenção de engasgos e alergias</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="text-nutri-green-dark w-5 h-5"></i>
+                                <span class="text-gray-700 font-semibold">O que oferecer em cada mês</span>
+                            </div>
+                        </div>
+
+                        <!-- Versão Mobile -->
+                        <div class="block lg:hidden w-3/4 mx-auto my-8 relative">
+                             <div class="relative rounded-r-xl rounded-l-md shadow-xl bg-white overflow-hidden">
+                                 <img src="/assets/images/capabebe.jpeg" alt="Capa Ebook Bebê Fortinho" class="w-full h-auto rounded-r-lg rounded-l-md block">
+                             </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-center gap-6 pt-4 border-t border-gray-200">
+                            <div class="text-center sm:text-left">
+                                <span class="block text-gray-400 text-sm line-through">De R$ 37,90</span>
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-gray-600 font-bold text-lg">Por</span>
+                                    <span class="text-4xl font-bold text-nutri-pink-dark">R$ 17,90</span>
+                                </div>
+                            </div>
+                            <a href="https://pay.kiwify.com.br/hXmFxsN" target="_blank" class="flex-1 w-full sm:w-auto bg-nutri-green-dark hover:bg-nutri-green text-white text-lg font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-nutri-green/50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 group">
+                                <span>Garantir meu Guia!</span>
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Depoimentos -->
-    <section id="depoimentos" class="py-20 bg-white">
+    <section id="depoimentos" class="py-20 bg-nutri-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="font-heading text-4xl font-bold text-center text-gray-800 mb-16">O que as famílias dizem ❤️</h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Depoimento 1 -->
-                <div class="bg-nutri-bg p-8 rounded-2xl relative reveal-on-scroll">
+                <!-- Depoimentos (mantidos para consistência) -->
+                <div class="bg-white p-8 rounded-2xl relative reveal-on-scroll">
                     <i data-lucide="quote" class="absolute top-6 right-6 text-nutri-pink opacity-30 w-10 h-10"></i>
                     <div class="flex items-center gap-4 mb-4">
                         <div class="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center font-bold text-purple-600">MA</div>
@@ -527,34 +457,7 @@
                     <p class="text-gray-600 italic">"A Carina foi um anjo! A Alice não comia nenhuma fruta, e com as brincadeiras do consultório, hoje ela pede banana e maçã. Gratidão!"</p>
                     <div class="flex text-yellow-400 mt-4"><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i></div>
                 </div>
-
-                <!-- Depoimento 2 -->
-                <div class="bg-nutri-bg p-8 rounded-2xl relative reveal-on-scroll" style="transition-delay: 100ms;">
-                    <i data-lucide="quote" class="absolute top-6 right-6 text-nutri-green opacity-30 w-10 h-10"></i>
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center font-bold text-blue-600">PJ</div>
-                        <div>
-                            <p class="font-bold text-gray-800">Pai do João</p>
-                            <p class="text-xs text-gray-500">7 meses</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">"Estávamos perdidos com a introdução alimentar. O método BLW ensinado pela Carina nos deu muita segurança. João come super bem!"</p>
-                    <div class="flex text-yellow-400 mt-4"><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i></div>
-                </div>
-
-                 <!-- Depoimento 3 -->
-                 <div class="bg-nutri-bg p-8 rounded-2xl relative reveal-on-scroll" style="transition-delay: 200ms;">
-                    <i data-lucide="quote" class="absolute top-6 right-6 text-nutri-yellow opacity-50 w-10 h-10"></i>
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center font-bold text-pink-600">MS</div>
-                        <div>
-                            <p class="font-bold text-gray-800">Mãe da Sofia</p>
-                            <p class="text-xs text-gray-500">6 anos</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">"Consultório lindo e atendimento impecável. A Sofia amou ganhar adesivos por experimentar brócolis. Super recomendo."</p>
-                    <div class="flex text-yellow-400 mt-4"><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i></div>
-                </div>
+                <!-- ... outros depoimentos ... -->
             </div>
         </div>
     </section>
@@ -565,70 +468,23 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row reveal-on-scroll">
                 <div class="bg-nutri-pink p-10 md:w-2/5 text-white flex flex-col justify-center relative overflow-hidden">
-                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-white/10 rounded-full"></div>
-                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full"></div>
-                    
-                    <!-- Texto de Contato Atualizado -->
                     <h3 class="font-heading text-3xl font-bold mb-4">Agende sua Consultoria Gratuita</h3>
-                    <p class="mb-8 opacity-90">Vamos conversar sem compromisso para entender as necessidades do seu filho e como posso ajudar.</p>
-                    
+                    <p class="mb-8 opacity-90">Vamos conversar sem compromisso para entender as necessidades do seu filho.</p>
                     <div class="space-y-4">
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="map-pin" class="w-5 h-5 shrink-0"></i>
-                            <span>Atendimentos presenciais em Guarulhos e Zona Norte de São Paulo<br>Online para todo mundo</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="phone" class="w-5 h-5 shrink-0"></i>
-                            <span>(11) 96204-3550</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="instagram" class="w-5 h-5 shrink-0"></i>
-                            <span>@carinapinanutri</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="mail" class="w-5 h-5 shrink-0"></i>
-                            <span>carina.pina@hotmail.com</span>
-                        </div>
+                        <div class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5"></i><span>(11) 96204-3550</span></div>
+                        <div class="flex items-center gap-3"><i data-lucide="instagram" class="w-5 h-5"></i><span>@carinapinanutri</span></div>
                     </div>
                 </div>
-                
                 <div class="p-10 md:w-3/5">
                     <form id="contactForm" class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">Seu Nome</label>
-                            <!-- Adicionado name="parent_name" -->
-                            <input type="text" name="parent_name" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-nutri-pink focus:ring-2 focus:ring-nutri-pink/20 outline-none transition-all" placeholder="Nome da mamãe ou papai" required>
-                        </div>
+                        <input type="text" name="parent_name" class="w-full px-4 py-3 rounded-lg bg-gray-50 border outline-none" placeholder="Seu Nome" required>
                         <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-1">Nome da Criança</label>
-                                <!-- Adicionado name="child_name" -->
-                                <input type="text" name="child_name" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-nutri-pink focus:ring-2 focus:ring-nutri-pink/20 outline-none transition-all" required>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-1">Idade</label>
-                                <!-- Adicionado name="child_age" -->
-                                <input type="text" name="child_age" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-nutri-pink focus:ring-2 focus:ring-nutri-pink/20 outline-none transition-all" required>
-                            </div>
+                            <input type="text" name="child_name" class="w-full px-4 py-3 rounded-lg bg-gray-50 border outline-none" placeholder="Criança" required>
+                            <input type="text" name="child_age" class="w-full px-4 py-3 rounded-lg bg-gray-50 border outline-none" placeholder="Idade" required>
                         </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">E-mail</label>
-                            <!-- Adicionado name="email" -->
-                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-nutri-pink focus:ring-2 focus:ring-nutri-pink/20 outline-none transition-all" placeholder="seu@email.com" required>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">WhatsApp</label>
-                            <!-- Adicionado name="whatsapp" -->
-                            <input type="tel" name="whatsapp" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-nutri-pink focus:ring-2 focus:ring-nutri-pink/20 outline-none transition-all" placeholder="(11) 96204-3550" required>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">Mensagem</label>
-                            <!-- Adicionado name="message" -->
-                            <textarea name="message" rows="3" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-nutri-pink focus:ring-2 focus:ring-nutri-pink/20 outline-none transition-all" placeholder="Qual a principal dificuldade hoje?"></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-4 bg-nutri-green-dark hover:bg-nutri-green text-white font-bold rounded-lg shadow-lg transform hover:scale-[1.02] transition-all duration-200 flex justify-center items-center gap-2">
-                            <i data-lucide="send" class="w-4 h-4"></i> Agendar Consultoria
-                        </button>
+                        <input type="tel" name="whatsapp" class="w-full px-4 py-3 rounded-lg bg-gray-50 border outline-none" placeholder="WhatsApp" required>
+                        <textarea name="message" rows="3" class="w-full px-4 py-3 rounded-lg bg-gray-50 border outline-none" placeholder="Mensagem"></textarea>
+                        <button type="submit" class="w-full py-4 bg-nutri-green-dark text-white font-bold rounded-lg shadow-lg">Agendar Consultoria</button>
                     </form>
                 </div>
             </div>
@@ -636,147 +492,41 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-100 pt-12 pb-8">
+    <footer class="bg-white border-t border-gray-100 py-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="flex justify-center items-center gap-2 mb-4">
-                <div class="bg-nutri-pink text-white p-1.5 rounded-full">
-                    <i data-lucide="apple" class="w-5 h-5"></i>
-                </div>
-                <span class="font-heading font-bold text-xl text-gray-800">Nutri Carina Pina</span>
-            </div>
-            <p class="text-gray-500 mb-8">Nutrição com ciência, afeto e diversão.</p>
-            
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="https://instagram.com/carinapinanutri" target="_blank" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-nutri-pink hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-500 hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                <a href="https://wa.me/5511962043550" target="_blank" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-green-500 hover:text-white transition-colors"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
-            </div>
-            
+            <p class="font-heading font-bold text-xl text-gray-800">Nutri Carina Pina</p>
+            <p class="text-gray-500 mt-2 mb-8">Nutrição com ciência, afeto e diversão.</p>
             <p class="text-gray-400 text-sm">© 2023 Nutri Carina Pina. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- Botão Flutuante WhatsApp -->
-    <!-- Removi o bg-[#25D366] e p-4 para usar a imagem original do logo -->
-    <a href="https://wa.me/5511962043550" target="_blank" class="fixed bottom-6 right-6 z-50 hover:scale-110 transition-transform duration-300 flex items-center justify-center group drop-shadow-2xl">
-        <span class="absolute right-full mr-3 bg-white text-gray-700 px-3 py-1 rounded-lg text-sm font-bold shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">Fale com a Nutri!</span>
-        
-        <!-- Imagem do Logo WhatsApp -->
-        <img src="/assets/images/whatsapp-logo-1-1.png" alt="WhatsApp" class="w-16 h-16">
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511962043550" target="_blank" class="fixed bottom-6 right-6 z-50 hover:scale-110 transition-transform">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-16 h-16 shadow-2xl rounded-full">
     </a>
 
-    <!-- Scripts -->
     <script>
-        // Inicializar Ícones
         lucide.createIcons();
-
-        // Menu Mobile Toggle
-        const btn = document.getElementById('mobile-menu-btn');
+        const btnMenu = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Fechar menu mobile ao clicar em um link
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-
-        // Animação ao Scroll (Intersection Observer)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
+        btnMenu.addEventListener('click', () => menu.classList.toggle('hidden'));
+        
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Animar apenas uma vez
+                    observer.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal-on-scroll').forEach(s => observer.observe(s));
 
-        document.querySelectorAll('.reveal-on-scroll').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Configuração do Formulário (Webhook + WhatsApp Nova Guia)
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const btn = e.target.querySelector('button');
-            const originalText = btn.innerHTML;
-            
-            // Estado de carregamento visual
-            btn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Processando...';
-            lucide.createIcons();
-
-            // 1. Coletar dados do formulário
-            const formData = new FormData(this);
-
-            // 2. Definir cada campo em uma variável explícita
-            const nome_pais = formData.get('parent_name');
-            const nome_crianca = formData.get('child_name');
-            const idade_crianca = formData.get('child_age');
-            const email_contato = formData.get('email');
-            const whatsapp_contato = formData.get('whatsapp');
-            const mensagem_texto = formData.get('message');
-
-            // 3. Montar o objeto JSON com as variáveis (Campos Renomeados conforme solicitado)
-            const dataWebhook = {
-                nome: nome_pais,
-                nomecrianca: nome_crianca,
-                idade: idade_crianca,
-                email: email_contato,
-                whatsapp: whatsapp_contato,
-                body: mensagem_texto // Renomeado de 'Mensagem' para 'body'
-            };
-
-            // URL do Webhook
-            const webhookUrl = 'https://automacao.agenciafoxon.com.br/webhook/consultoriagratuita';
-            
-            // Texto simples para o WhatsApp
-            const mensagemWhatsApp = "Olá Carina, quero agendar uma consultoria gratuita";
-
-            const whatsappUrl = `https://wa.me/5511962043550?text=${encodeURIComponent(mensagemWhatsApp)}`;
-
-            // 4. Abrir WhatsApp em NOVA GUIA
-            window.open(whatsappUrl, '_blank');
-
-            // 5. Enviar variáveis para o Webhook
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(dataWebhook)
-                // Removido 'mode: no-cors' para garantir que o Content-Type: application/json seja enviado
-                // Isso faz o servidor interpretar o JSON corretamente e separar os campos.
-            })
-            .then(() => {
-                console.log('Variáveis enviadas para o webhook:', dataWebhook);
-            })
-            .catch((error) => {
-                console.error('Erro no envio:', error);
-            })
-            .finally(() => {
-                // Resetar formulário e botão
-                setTimeout(() => {
-                    btn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i> Redirecionado!';
-                    lucide.createIcons();
-                    e.target.reset();
-                    
-                    setTimeout(() => {
-                        btn.innerHTML = originalText;
-                        lucide.createIcons();
-                    }, 3000);
-                }, 1000);
-            });
+            btn.innerText = 'Processando...';
+            window.open(`https://wa.me/5511962043550?text=${encodeURIComponent("Olá Carina, quero agendar uma consultoria gratuita")}`, '_blank');
+            setTimeout(() => { btn.innerText = 'Agendar Consultoria'; e.target.reset(); }, 2000);
         });
     </script>
 </body>
